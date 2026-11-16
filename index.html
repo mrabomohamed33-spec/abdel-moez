@@ -54,16 +54,37 @@ textarea,input,select{width:100%;padding:12px;border-radius:10px;border:2px soli
 .heroBadge{display:inline-block;background:rgba(255,215,0,.16);border:1px solid rgba(255,215,0,.6);color:#ffd700;padding:6px 14px;border-radius:99px;font-size:13px;font-weight:900}
 @keyframes shine{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 .bigTitle,.bigTitle2{background-size:200% 200%;animation:shine 4s ease-in-out infinite}
+
+/* نجوم منيرة حول اسم المنصة */
+.starsRow{display:flex;justify-content:center;gap:8px;font-size:26px;line-height:1;margin:6px 0}
+.shineStar{display:inline-block;animation:twinkle 1.8s ease-in-out infinite;filter:drop-shadow(0 0 8px #ffd700) drop-shadow(0 0 14px #fff3a0)}
+.shineStar:nth-child(2){animation-delay:.3s;font-size:32px}
+.shineStar:nth-child(3){animation-delay:.6s;font-size:22px}
+.shineStar:nth-child(4){animation-delay:.9s;font-size:34px}
+.shineStar:nth-child(5){animation-delay:1.2s;font-size:22px}
+.shineStar:nth-child(6){animation-delay:1.5s;font-size:30px}
+.shineStar:nth-child(7){animation-delay:.45s;font-size:24px}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0deg);opacity:1}50%{transform:scale(1.35) rotate(18deg);opacity:.75}}
+.nameStars{position:relative;display:inline-block}
+.nameStars:before{content:"✨";position:absolute;left:-42px;top:6px;font-size:30px;animation:twinkle 1.6s infinite}
+.nameStars:after{content:"🌟";position:absolute;right:-42px;top:6px;font-size:30px;animation:twinkle 2s infinite}
+/* عبارات تحفيزية */
+.motivBox{margin:12px auto 4px;max-width:560px;background:linear-gradient(135deg,rgba(255,215,0,.18),rgba(255,255,255,.08));border:1.5px solid rgba(255,215,0,.7);border-radius:14px;padding:10px 14px;text-align:center}
+.motivPhrase{font-size:19px;font-weight:900;color:#fff7b0;text-shadow:0 2px 8px rgba(0,0,0,.6);min-height:28px;animation:motivFade 4s ease-in-out infinite}
+.motivSub{font-size:13px;color:#fff;opacity:.9;margin-top:4px}
+.motivList{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:10px}
+.motivChip{background:rgba(255,255,255,.12);border:1px solid rgba(255,215,0,.5);color:#fff;padding:5px 10px;border-radius:99px;font-size:13px;font-weight:700}
+@keyframes motivFade{0%,100%{opacity:1;transform:translateY(0)}50%{opacity:.85;transform:translateY(-2px)}}
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.0/mammoth.browser.min.js"></script>
 </head>
 <body>
 <div class="watermark">Mr Abdel Moez</div>
-<header><h1>👑 <span>Mr</span> Abdel Moez <span>👑</span></h1><p>✨ English Platform - Secondary - منصة مستر عبد المعز ✨</p></header>
+<header><div class="starsRow"><span class="shineStar">⭐</span><span class="shineStar">✨</span><span class="shineStar">🌟</span><span class="shineStar">💫</span><span class="shineStar">🌟</span><span class="shineStar">✨</span><span class="shineStar">⭐</span></div><h1>👑 <span>Mr</span> Abdel Moez <span>👑</span></h1><p>✨ English Platform - Secondary - منصة مستر عبد المعز ✨</p><p style="font-size:15px;font-weight:900;color:#fff7b0;margin:6px 0;text-shadow:0 2px 8px rgba(0,0,0,.6)">🌟 ذاكر - اجتهد - تفوق - مستقبلك بيبدأ من هنا 🌟</p></header>
 <div class="wrap">
 <div id="pageHome">
 <div class="card" style="text-align:center">
-<div class="heroWrap"><div class="heroCrown">👑</div><div class="bigTitle">Mr</div><div class="bigTitle2">Abdel Moez</div><div class="heroLine"></div><div class="heroBadge">✨ ENGLISH • SECONDARY • MR ABDEL MOEZ ✨</div></div>
+<div class="heroWrap"><div class="starsRow"><span class="shineStar">⭐</span><span class="shineStar">✨</span><span class="shineStar">🌟</span><span class="shineStar">💫</span><span class="shineStar">🌟</span><span class="shineStar">✨</span><span class="shineStar">⭐</span></div><div class="heroCrown">👑</div><div class="nameStars"><div class="bigTitle">Mr</div><div class="bigTitle2">Abdel Moez</div></div><div class="heroLine"></div><div class="heroBadge">✨ ENGLISH • SECONDARY • MR ABDEL MOEZ ✨</div><div class="starsRow"><span class="shineStar">✨</span><span class="shineStar">⭐</span><span class="shineStar">💫</span><span class="shineStar">🌟</span><span class="shineStar">💫</span><span class="shineStar">⭐</span><span class="shineStar">✨</span></div><div class="motivBox"><div class="motivPhrase" id="motivHome">🌟 انت قدها - الثانوية مش صعبة علي اللي بيذاكر صح 🌟</div><div class="motivSub">كل سؤال بتحله النهاردة - بيقربك من حلمك بكرة</div><div class="motivList"><span class="motivChip">💪 ذاكر صح - تنجح صح</span><span class="motivChip">🎯 حلمك يستاهل تعبك</span><span class="motivChip">🔥 متفوق مش بالحظ - بالاجتهاد</span></div></div></div>
 <p class="small" style="font-size:18px;color:#1a0f3d;font-weight:900">Welcome - اهلا بيك 🎓</p>
 <p class="small">منصة مستر عبد المعز - انجليزي ثانوي - اختار انت طالب ولا معلم</p>
 <button class="btn bGold" onclick="goStudent()">🎓 انا طالب - Student</button>
@@ -74,7 +95,7 @@ textarea,input,select{width:100%;padding:12px;border-radius:10px;border:2px soli
 
 <div id="pageStudent" class="hidden">
 <div class="topBar"><button class="backBtn" onclick="goHome()">العودة للواجهة ←</button><b>🎓 قسم الطالب</b></div>
-<div class="heroWrap"><div class="heroCrown">👑</div><div class="bigTitle">Mr</div><div class="bigTitle2">Abdel Moez</div><div class="heroLine"></div><div class="heroBadge">✨ MR ABDEL MOEZ • ENGLISH ✨</div><p class="heroSub">🎓 قسم الطالب - الامتحانات المنشورة فقط - 4 أسئلة في الصفحة بخط كبير</p></div>
+<div class="heroWrap"><div class="starsRow"><span class="shineStar">⭐</span><span class="shineStar">✨</span><span class="shineStar">🌟</span><span class="shineStar">💫</span><span class="shineStar">🌟</span><span class="shineStar">✨</span><span class="shineStar">⭐</span></div><div class="heroCrown">👑</div><div class="nameStars"><div class="bigTitle">Mr</div><div class="bigTitle2">Abdel Moez</div></div><div class="heroLine"></div><div class="heroBadge">✨ MR ABDEL MOEZ • ENGLISH ✨</div><div class="starsRow"><span class="shineStar">✨</span><span class="shineStar">⭐</span><span class="shineStar">💫</span><span class="shineStar">🌟</span><span class="shineStar">💫</span><span class="shineStar">⭐</span><span class="shineStar">✨</span></div><div class="motivBox"><div class="motivPhrase" id="motivStudent">💪 يلا يا بطل - امتحان النهاردة - تفوق بكرة 💪</div><div class="motivSub">ركز - اقرا السؤال كويس - واختار الصح - انت قدها</div><div class="motivList"><span class="motivChip">⭐ انت تقدر</span><span class="motivChip">🎯 ركز وهتجيبها</span><span class="motivChip">🏆 النجاح بيبدأ من هنا</span></div></div><p class="heroSub">🎓 قسم الطالب - الامتحانات المنشورة فقط - 4 أسئلة في الصفحة بخط كبير</p></div>
 <div class="card">
 <h2 style="text-align:right">الامتحانات المتاحة</h2>
 <p class="small" style="text-align:right;font-size:17px">👆 اختار صفك فوق الأول - هتشوف أسئلة صفك بس</p>
@@ -1314,6 +1335,15 @@ document.getElementById("importBackup").onchange=function(e){
     try{ var d=JSON.parse(r.result); EXAMS=d.exams||EXAMS; BANK=d.bank||BANK; PASSAGES=d.passages||PASSAGES; TRANS=d.trans||TRANS; RESULTS=d.results||RESULTS; if(d.pass){ TEACHER_PASS=d.pass; } if(d.wa){ var wa=document.getElementById("waNumber"); if(wa){ wa.value=d.wa; } } saveAll(); alert("اتستوردت النسخة"); renderBank(); renderExams(); }catch(err){ alert("ملف مش سليم"); }
   }; r.readAsText(f);
 };
+// عبارات تحفيزية بتتغير كل 4 ثواني - لطلبة الثانوية
+var MOTIVS=["🌟 انت قدها - الثانوية مش صعبة علي اللي بيذاكر صح 🌟","💪 ذاكر صح - تنجح صح - متفوق مش بالحظ - بالاجتهاد 💪","🎯 حلمك يستاهل تعبك - كل سؤال بتحله بيقربك منه 🎯","🔥 الغلط مش فشل - الغلط خطوة للنجاح - كمل 🔥","🏆 النجاح بيبدأ من هنا - ركز - واختار الصح - انت تقدر 🏆","✨ انت مش لوحدك - مستر عبد المعز معاك لحد التفوق ✨","📚 النهاردة مذاكرة - بكرة تفوق - بعده كلية أحلامك 📚"];
+var motivIdx=0;
+function rotateMotiv(){
+  motivIdx=(motivIdx+1)%MOTIVS.length;
+  var a=document.getElementById("motivHome"); if(a){ a.textContent=MOTIVS[motivIdx]; }
+  var b=document.getElementById("motivStudent"); if(b){ b.textContent=MOTIVS[(motivIdx+2)%MOTIVS.length]; }
+}
+setInterval(rotateMotiv,4000);
 loadAll();
 renderMotiv();
 // FIX: يفتح علي الواجهة دايما - مش علي صفحة المعلم - حتي لو عملت Refresh وانت جوه المعلم
